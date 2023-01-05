@@ -48,7 +48,31 @@ function LOVE(){
     if(!p1.match(/\S/) || !p2.match(/\S/)){
         window.alert("Person 1 or/and Person 2 Name is Empty");
     } else {
+        var level;
         let rand = Math.floor(Math.random()*100);
-        out.innerHTML = "the love percentage for " + p1 + " and " + p2 + " is at " + rand +"%";
+        switch(true) {
+            case (rand < 20):
+                level = "morbid";
+                break;
+            case (rand < 40):
+                level = "bad";
+                break;
+            case (rand < 60):
+                level = "okay";
+                break;
+            case (rand < 80):
+                level = "good";
+                break;
+            case (rand < 99):
+                level = "amazing";
+                break;
+            case (rand == 100):
+                level = "excellent";
+                break;
+            default:
+                level = "broken"
+                break;
+        }
+        out.innerHTML = "the love percentage for " + p1 + " and " + p2 + " is at a " + level + " " + rand +"%";
     }
 }
