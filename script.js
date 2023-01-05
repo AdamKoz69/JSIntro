@@ -73,6 +73,9 @@ function LOVE(){
                 level = "broken"
                 break;
         }
+
+
+        
         out.innerHTML = "the love percentage for " + p1 + " and " + p2 + " is at a " + level + " " + rand +"%";
     }
 }
